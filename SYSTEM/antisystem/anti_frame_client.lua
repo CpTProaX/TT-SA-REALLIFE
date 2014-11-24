@@ -51,16 +51,16 @@ function onFrameRateCount()
 		--local text="Frames Per Second: "..lastFramesPerSecond.."\nFrames This Second: "..actualFramesPerSecond.."\nFramecrashs last Minute: "..frameCrashLastPerMinute
 		local text=""
 		if(lastFramesPerSecond<minFrameRate)then
-			text=string.format("%s#FF0000Frames Per Second: %s", text, lastFramesPerSecond)
+			text=string.format("%s#FF0000Frames pro Sekunde: %s", text, lastFramesPerSecond)
 		else
-			text=string.format("%sFrames Per Second: %s", text, lastFramesPerSecond)
+			text=string.format("%sFrames pro Sekunde: %s", text, lastFramesPerSecond)
 		end
-		text=string.format("%s\n#FFFFFFFrames This Second: %s", text, actualFramesPerSecond)
+		text=string.format("%s\n#FFFFFFFrames diese Sekunde: %s", text, actualFramesPerSecond)
 		
 		if(frameCrashLastPerMinute>(crashesToKick/3))then
-			text=string.format("%s\n#FF0000Framecrashs last Minute: %s", text, frameCrashLastPerMinute)
+			text=string.format("%s\n#FF0000Framecrashs in der letzten Minute: %s", text, frameCrashLastPerMinute)
 		else
-			text=string.format("%s\nFramecrashs last Minute: %s", text, frameCrashLastPerMinute)
+			text=string.format("%s\nFramecrashs in der letzten Minute: %s", text, frameCrashLastPerMinute)
 		end
 		dxDrawText(text , (screenW - 345) / 2, 0, ((screenW - 345) / 2) + 345, ( 0) + 64, tocolor(255, 255, 255, 255), 1.20, "default", "left", "top", false, false, true, true, false)		
 	end
