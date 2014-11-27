@@ -74,16 +74,7 @@ function loadPrivCars()
 			vioSetElementData(thevehicle,"no_handel",tonumber(dasatz["no_handel"]))
 			vioSetElementData(thevehicle,"kmstand",dasatz["kmstand"])
 			setElementFrozen(thevehicle,true)
-			if(dasatz["Besitzer"]=="[TTeam]Geramy92" and dasatz["Model"]=="409")then
-				removeVehicleSirens(thevehicle)
-				addVehicleSirens(thevehicle, 6, 2, true, false, false, false)
-				setVehicleSirens(thevehicle, 1, 0.7, 3.4, 0.3, 255, 0, 0, 255, 255)
-				setVehicleSirens(thevehicle, 2, -0.7, 3.4, 0.3, 255, 0, 0, 255, 255)
-				setVehicleSirens(thevehicle, 3, 0.7, -3.7, 0.3, 255, 0, 0, 255, 255)
-				setVehicleSirens(thevehicle, 4, -0.7, -3.7, 0.3, 255, 0, 0, 255, 255)
-				setVehicleSirens(thevehicle, 5, -0.5, 0.8, 0.8, 255, 0, 0, 255, 255)
-				setVehicleSirens(thevehicle, 6, 0.5, 0.8, 0.8, 255, 0, 0, 255, 255)
-			end
+			
 			vioSetElementData(thevehicle,"premColor","-1")
 			local time=getRealTime()
 			if(MySQL_GetVar("premium", "PremiumUntil","Name='"..dasatz["Besitzer"].."'"))then
