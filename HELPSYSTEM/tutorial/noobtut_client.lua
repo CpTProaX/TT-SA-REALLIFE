@@ -22,7 +22,7 @@ local matrixtable={
 {2743.154296875,-2435.8955078125,21.916435241699,2826.2353515625,-2486.1259765625,-2.0511016845703,0,70,0,0} --> ALLGEMEINE HILFE (Bankautomaten mit Klicksys, Jobs,Telefon,Weitere Informationen mit F1) 
 }
 
-local soundpath="http://mtadata.terratex.eu/tutsounds/"
+local soundpath="/FILES/SOUNDS/tutsounds/"
 local stepper=0
 local soundelement=false
 

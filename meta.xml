@@ -548,6 +548,18 @@
 			<file src="FILES/SOUNDS/tada.wav" /> <!-- POKAL -->
 			<file src="FILES/SOUNDS/bus/stop.wav" />
 			<file src="FILES/SOUNDS/eiswagen.wav" />
+    <!--Tutorial Sounds -->
+        <file src="FILES/SOUNDS/tutsounds/247.mp3" />
+        <file src="FILES/SOUNDS/tutsounds/auto.mp3" />
+        <file src="FILES/SOUNDS/tutsounds/einleitung.mp3" />
+        <file src="FILES/SOUNDS/tutsounds/essen.mp3" />
+        <file src="FILES/SOUNDS/tutsounds/fraktion.mp3" />
+        <file src="FILES/SOUNDS/tutsounds/freizeit.mp3" />
+        <file src="FILES/SOUNDS/tutsounds/infor.mp3" />
+        <file src="FILES/SOUNDS/tutsounds/pd.mp3" />
+        <file src="FILES/SOUNDS/tutsounds/Ring1.wav" />
+        <file src="FILES/SOUNDS/tutsounds/stadthalle.mp3" />
+
 	<!-- IMAGEFILES / BILDER -->
 		<!-- BLIPS -->
 			<file src="FILES/IMAGES/blips/tanke.png"/>
