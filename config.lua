@@ -10,6 +10,9 @@ config["maindomain"]="http://terratex.eu"
 --Bugtracker URL
 config["bugdomain"]="https://github.com/geramy92/TT-SA-REALLIFE/issues";
 
+--IP or Domain to Teamspeak3
+config["teamspeak"]="terratex.eu"
+
 --Clantag: will protect Register with this tag or names of Clanmembers without this tag (Will set that [ABC]DEF is the same like DEF in checkups)
 config["clantag"]="[TTeam]"
 
