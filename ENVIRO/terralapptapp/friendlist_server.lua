@@ -151,8 +151,8 @@ function sendAnfrageFriendlist_func(name)
 						
 					end
 				end
-			elseif(MySQL_DatasetExist("players", "Nickname='[TTeam]"..name.."'"))then		
-				name="[TTeam]"..name
+			elseif(MySQL_DatasetExist("players", "Nickname='"..config["clantag"]..name.."'"))then		
+				name=config["clantag"]..name
 				if(MySQL_DatasetExist("tlt_friendrequest", "Fromname='"..getPlayerName(source).."' and Toname='"..name.."'"))then
 					showError(source,string.format("Du hast %s bereits eine Anfrage gestellt!", name))
 				else
@@ -204,8 +204,8 @@ function sendAnfrageFriendlist_func(name)
 						end
 					end
 					
-				elseif(MySQL_GetResultsCount("players", "Nickname LIKE '[TTeam]%"..name.."%'")==1)then
-					name=MySQL_GetString("players", "Nickname", "Nickname LIKE '[TTeam]%"..name.."%'")
+				elseif(MySQL_GetResultsCount("players", "Nickname LIKE '"..config["clantag"].."%"..name.."%'")==1)then
+					name=MySQL_GetString("players", "Nickname", "Nickname LIKE '"..config["clantag"].."%"..name.."%'")
 					if(MySQL_DatasetExist("tlt_friendrequest", "Fromname='"..getPlayerName(source).."' and Toname='"..name.."'"))then
 						showError(source,string.format("Du hast %s bereits eine Anfrage gestellt!", name))
 					else
