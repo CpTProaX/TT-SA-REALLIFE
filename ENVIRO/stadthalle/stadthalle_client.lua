@@ -25,7 +25,12 @@ guiGridListAddColumn(Stadthalle_Grid[1],"Lizens",0.7)
 guiGridListAddColumn(Stadthalle_Grid[1],"Preis",0.2)
 Stadthalle_Button[1] = guiCreateButton(262,31,107,30,"Kaufen!",false,Stadthalle_Tab[1])
 Stadthalle_Tab[2] = guiCreateTab("Credits",Stadthalle_TabPanel[1])
-Stadthalle_Label[2] = guiCreateLabel(12,21,356,184,"Dieses Reallife Script ist geschrieben von Geramy. Kopieren oder Veroeffentlichen ohne seine Zustimmung ist strafbar.\n\nDas Script ist fuer den TerraTex - Reallife Server. \nMeldet Bugs bitte im Forum unter www.tt-rl.de \nIn diesem Forum kannst du auch Vorschlaege fuer das Script einreichen. \nFuer Hilfestellungen nutze /report. \nEine Adminliste erhaelst du mit /admins \neuer TerraTex-Team",false,Stadthalle_Tab[2])
+local credits="Dieses Reallife Script basiert auf dem TerraTex Reallife Script."
+credits+credits="TerraTex Reallife Script von Colin Weber (terratex.eu) ist lizenziert unter einer Creative Commons Namensnennung-Nicht kommerziell 4.0 International Lizenz."
+credits+credits="\nMeldet Bugs bitte unter"..config["bugdomain"]
+credits+credits="\nFuer Hilfestellungen nutze /report\nEine Adminliste erhälst du mit /admins"
+	
+Stadthalle_Label[2] = guiCreateLabel(12,21,356,184,credits,false,Stadthalle_Tab[2])
 guiLabelSetColor(Stadthalle_Label[2],255,255,255)
 guiLabelSetVerticalAlign(Stadthalle_Label[2],"top")
 guiLabelSetHorizontalAlign(Stadthalle_Label[2],"left",true)
