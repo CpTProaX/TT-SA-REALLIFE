@@ -1,9 +1,17 @@
-gMysqlHost_Log = ""
-gMysqlUser_Log = ""
-gMysqlPass_Log = ""
-gMysqlDatabase_Log = ""
-
 function logs_MySQL_Startup()
+	local gMysqlHost_Log, gMysqlUser_Log, gMysqlPass_Log, gMysqlDatabase_Log
+	if(config["uniquelogdb"])then
+		gMysqlHost_Log=config["logmysqlhost"]
+		gMysqlUser_Log=config["logmysqluser"]
+		gMysqlPass_Log=config["logmysqlpassword"]
+		gMysqlDatabase_Log=config["logmysqldb"]
+	else
+		gMysqlHost_Log=config["mysqlhost"]
+		gMysqlUser_Log=config["mysqluser"]
+		gMysqlPass_Log=config["mysqlpassword"]
+		gMysqlDatabase_Log=config["mysqldb"]
+	end
+
 	logs_handler = mysql_connect(gMysqlHost_Log, gMysqlUser_Log, gMysqlPass_Log, gMysqlDatabase_Log)
 	if( not logs_handler) then
 		outputDebugString("Couldn't run query: Unable to connect to the Log MySQL server!")
