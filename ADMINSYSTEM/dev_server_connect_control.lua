@@ -19,11 +19,11 @@ function onPlayerDevServerConnect(nickname)
             if(isDev==0)then
                 local timeQuery="Nickname='"..nicknameSecure.."' and TIMEDIFF(fromTimestamp, NOW())<0 and (TIMEDIFF(toTimestamp, NOW())>0 or toTimestamp IS NULL)"
                 if(not MySQL_DatasetExist("dev_beta",timeQuery))then
-                    cancelEvent(true,"Der Developmentserver von TerraTex ist nur für Entwickler und ausgewähle Betatester gedacht!")
+                    cancelEvent(true,"Der Developmentserver von "..config["communityname"].." ist nur für Entwickler und ausgewähle Betatester gedacht!")
                 end
             end
         else
-            cancelEvent(true,"Der Developmentserver von TerraTex ist nur für Entwickler und ausgewähle Betatester gedacht!")
+            cancelEvent(true,"Der Developmentserver von "..config["communityname"].." ist nur für Entwickler und ausgewähle Betatester gedacht!")
         end
         --[[QUERY DELETES]]
         local delQuery="TIMEDIFF(fromTimestamp, NOW())<0 AND (TIMEDIFF(toTimestamp, NOW()))<0"
