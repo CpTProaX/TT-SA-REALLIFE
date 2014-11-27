@@ -934,7 +934,7 @@ function force_nickchange(thePlayer,cmd,toPlayerPart)
 			if(toPlayer)then
 				local nick=getPlayerName(toPlayer)
 				outputChatBox(getPlayerName(toPlayer).." wurde vom Server gekickt und zu einem Nickchange gezwungen!",getRootElement(),255,0,0)
-				kickPlayer ( toPlayer, thePlayer , "Dein Account wurde gesperrt, da dein Nickname nicht den Richtlinien entspricht. Beantrage einen Nickchange auf cp.terratex.eu" )
+				kickPlayer ( toPlayer, thePlayer , "Dein Account wurde gesperrt, da dein Nickname nicht den Richtlinien entspricht. Beantrage einen Nickchange auf "..config["maindomain"] )
 				
 				MySQL_SetVar("players", "force_nickchange", "1", "Nickname='"..nick.."'")
 				
