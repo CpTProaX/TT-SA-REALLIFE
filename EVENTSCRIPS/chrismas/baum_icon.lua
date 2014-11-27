@@ -15,7 +15,7 @@ function hitWeihnachtsPickup(thePlayer)
 				outputChatBox("Hier kannst du dein Fahrzeuggeschenk abholen, den du zu jedem Advent, Heiligabend oder an den Weihnachsfeiertagen bekommen kannst!",166,0,166)
 				outputChatBox("Adventskalernder: Man bekommt täglich 19:30 Uhr ein Geschenk!",166,0,0)
 				outputChatBox("Advent Advent: zu jedem Advent, Heiligabend oder an den Weihnachsfeiertagen werden größere Geschenke verschenkt!",166,0,166)
-				outputChatBox("TerraTex wünscht frohe Weihnachten!",166,0,166)
+				outputChatBox(config["communityname"].." wünscht frohe Weihnachten!",166,0,166)
 			end
 		end
 end
