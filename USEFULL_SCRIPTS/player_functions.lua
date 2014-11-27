@@ -55,11 +55,11 @@ function getPlayerFromIncompleteName(name)
                 return false
             end
             return getPlayerFromName(name)
-        elseif(getPlayerFromName("[TTeam]"..name))then
-            if(not isPlayerLoggedIn(getPlayerFromName("[TTeam]"..name)))then
+        elseif(getPlayerFromName(config["clantag"]..name))then
+            if(not isPlayerLoggedIn(getPlayerFromName(config["clantag"]..name)))then
                 return false
             end
-            return getPlayerFromName("[TTeam]"..name)
+            return getPlayerFromName(config["clantag"]..name)
         else
             name=string.lower(name)
             for theKey,thePlayer in ipairs(players) do
