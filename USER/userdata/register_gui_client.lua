@@ -9,7 +9,7 @@ RegisterGUI = {
 addEventHandler("onClientResourceStart",getRootElement(),
     function()
 	    local screenW, screenH = guiGetScreenSize()
-	    Registergui = guiCreateWindow((screenW - 722) / 2, (screenH - 378) / 2, 722, 378, "Registrieren auf TerraTex", false)
+	    Registergui = guiCreateWindow((screenW - 722) / 2, (screenH - 378) / 2, 722, 378, "Registrieren auf "..config["communityname"], false)
 	    RegisterGUI.window[1]=Registergui
 	    table.insert(allGuis,Registergui)
 	    guiWindowSetSizable(RegisterGUI.window[1], false)
