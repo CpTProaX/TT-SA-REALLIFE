@@ -23,9 +23,10 @@ function playerConnect (playerNick, playerIP, playerUsername, playerSerial, play
         outputDebugString("UTFLEN: "..tostring(utfLen(playerNick)).." ~= STRINGLEN "..tostring(string.len(playerNick)))
     end
 
-
+    local testtag=string.gsub(config["clantag"],"\\[","")
+    testtag=string.gsub(testtag,"\\]","")
 	
-	if(string.find(playerNick,config["clantag"]))then
+	if(string.find(playerNick,testtag))then
 	--outputDebugString(theSonder)
 		if (MySQL_GetString("players", "Nickname", "Nickname='"..playerNick.."'"))then
 	
