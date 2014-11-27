@@ -124,14 +124,15 @@ function playerConnect (playerNick, playerIP, playerUsername, playerSerial, play
 					end
 				end
 				mysql_free_result(result)
-				cancelEvent(true,string.format("Es wurden bereits Accounts von diesem PC, auf dem Server registriert. Infos über bereits registrierte Accounts auf: http://cp.tt-rl.de/?page=multi&id=%s [Such ID: %s]", id, id))
+				--@todo: set Link to Accountshowsystem if wanted (need Controlpanel)
+				cancelEvent(true,string.format("Es wurden bereits Accounts von diesem PC, auf dem Server registriert.")
 				return true;
 			end
 		end
 	end
 	
 	if(MySQL_GetVar("players", "force_nickchange", "Nickname='"..uname.."'")==1)then
-		cancelEvent(true,"Dein Account ist gesperrt: Dein Nickname entspricht nicht den Richtlinien. Beantrage einen Nickchange auf cp.terratex.eu um einen Account wieder freizuschalten.")
+		cancelEvent(true,"Dein Account ist gesperrt: Dein Nickname entspricht nicht den Richtlinien. Beantrage einen Nickchange auf "..config["maindomain"].." um einen Account wieder freizuschalten.")
 		return true;
 	end
 
