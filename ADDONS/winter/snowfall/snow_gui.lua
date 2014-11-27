@@ -6,6 +6,8 @@ local changing_wind_direction = true
 local highlight = true
 guiEnabled = true
 snowToggle = true
+local sx,sy = guiGetScreenSize()
+local sx2,sy2 = sx/2,sy/2
 local snow = {}
 -- default settings
 settings = {type = "real", density = 2000, wind_direction = {0.01,0.01}, wind_speed = 1, snowflake_min_size = 1, snowflake_max_size = 3, fall_speed_min = 1, fall_speed_max = 4, jitter = true}
