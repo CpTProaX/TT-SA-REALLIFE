@@ -15,8 +15,8 @@ tapps_discription = {
 	["Notizblock"] = "Einfache Tapp zum Speichern von Informationen",
 	["Colorpicker"] = "Einfache Tapp zum Finden von Farbcodes",
 	["TicTacToe"] = "Ein Spiel Zwischen Freunden: Fordere Spieler zu einer Partie TicTacToe herraus!",
-	["MineSweeper"] = "Klassisches Minesweeper Game für TerraTex!",
-	["OnlineBanking"] = "Mobile Online Banking für TerraTex",
+	["MineSweeper"] = "Klassisches Minesweeper Game",
+	["OnlineBanking"] = "Mobile Online Banking",
 	["OnlineSchutz"] = "Online Schutz für Online Banking",
 	}
 
