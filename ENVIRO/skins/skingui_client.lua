@@ -1,10 +1,4 @@
---
---	Dieses Script gehört Colin Weber.
---	Dieses Script ist geistiges Eigentum, d.h. es darf weder kopiert, bearbeitet oder verfälscht werden.
---	Es darf nur auf TT-rl.de (TerraTex Reallife) genutzt werden.
---	
---	(c) 2011 by [TTeam]Geramy92 / Colin Weber
---
+
 policeSkin={[150]=true,[265]=true,[266]=true,[268]=true,[280]=true,[281]=true,[282]=true,[283]=true,[284]=true,[288]=true,[267]=true}
 groveSkin={[105]=true,[106]=true,[107]=true,[269]=true,[270]=true,[271]=true,[311]=true,[301]=true,[300]=true}
 newsSkin={[148]=true,[188]=true,[227]=true,[187]=true}
