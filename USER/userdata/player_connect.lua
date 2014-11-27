@@ -125,7 +125,7 @@ function playerConnect (playerNick, playerIP, playerUsername, playerSerial, play
 				end
 				mysql_free_result(result)
 				--@todo: set Link to Accountshowsystem if wanted (need Controlpanel)
-				cancelEvent(true,string.format("Es wurden bereits Accounts von diesem PC, auf dem Server registriert.")
+				cancelEvent(true,string.format("Es wurden bereits Accounts von diesem PC, auf dem Server registriert."))
 				return true;
 			end
 		end
