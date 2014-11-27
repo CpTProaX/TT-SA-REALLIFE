@@ -25,10 +25,6 @@ function dutytimer_saveToDB()
 			mysql_query(handler,query)
 		end
 		
-		--Reihenfolge: Online, Dutycops, idcops, dutymedics, dutytaxi
-		
-		--INSERT INTO dutycounter (Nickname,dailytimestamp,online,dutycops,idcops,dutymedic,dutytaxi,idname) VALUES ([TTeam]Geramy92,1381666697,30,0,0,20,0,0),(Johaenchen,1381666697,30,0,0,0,0,20) ON DUPLICATE KEY UPDATE online=VALUES(online),dutycops=VALUES(dutycops),idcops=VALUES(idcops),dutymedic=VALUES(dutymedic),dutytaxi=VALUES(dutytaxi),idname=VALUES(idname)
-		--[TTeam]Geramy92,1381666697,30,0,0,20,0,0),(Johaenchen,1381666697,30,0,0,0,0,20)
 	outputDebugString("Dutys were saved!")
 end
 addEventHandler("onResourceStop",getRootElement(),dutytimer_saveToDB)
