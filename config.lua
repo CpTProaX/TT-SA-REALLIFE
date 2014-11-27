@@ -5,7 +5,10 @@ config={}
 config["domains"]={"terratex.eu","tt-rl.de"} 
 
 -- Main Domain / will later be set in credits or info guis
-config["maindomain"]="terratex.eu"
+config["maindomain"]="http://terratex.eu"
+
+--Bugtracker URL
+config["bugdomain"]="https://github.com/geramy92/TT-SA-REALLIFE/issues";
 
 --Clantag: will protect Register with this tag or names of Clanmembers without this tag (Will set that [ABC]DEF is the same like DEF in checkups)
 config["clantag"]="[TTeam]"
