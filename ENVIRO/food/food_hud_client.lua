@@ -1,10 +1,4 @@
---
---	Dieses Script gehört Colin Weber.
---	Dieses Script ist geistiges Eigentum, d.h. es darf weder kopiert, bearbeitet oder verfälscht werden.
---	Es darf nur auf TT-rl.de (TerraTex Reallife) genutzt werden.
---	
---	(c) 2011 by [TTeam]Geramy92 / Colin Weber
---
+
 local food=100
 local foodtimer=false
 addEvent("playSound",true)
@@ -125,24 +119,6 @@ function showFood()
 end
 addEventHandler("onClientRender",getRootElement(),showFood)
 
-
-
-
-
---[[function killByVehicleB()
-		if(isPedInVehicle(getLocalPlayer()))then
-			
-			if(getPedOccupiedVehicle(getLocalPlayer())==source)then
-				if(force>30)then
-					--outputChatBox("lol_: "..math.sqrt(velocityX*velocityX+velocityY*velocityY+velocityZ*velocityZ).." "..(1/180*20))
-					--outputChatBox(force.." "..hitElementForce)
-					local HIT=force*0.01
-				--	triggerEvent("onClientPlayerDamage",getLocalPlayer(),false,false,3,HIT)
-				end
-			end
-		end
-end
-addEventHandler("onClientVehicleCollision",getRootElement(),killByVehicleB)]]
 
 
 
