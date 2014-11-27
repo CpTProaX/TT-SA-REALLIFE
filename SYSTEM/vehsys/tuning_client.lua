@@ -1,10 +1,4 @@
---
---	Dieses Script gehört Colin Weber.
---	Dieses Script ist geistiges Eigentum, d.h. es darf weder kopiert, bearbeitet oder verfälscht werden.
---	Es darf nur auf TT-rl.de (TerraTex Reallife) genutzt werden.
---	
---	(c) 2011 by [TTeam]Geramy92 / Colin Weber
---
+
 local newcolorstring="0|0|0|0"
 local newtuningstring="0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0"
 local pricing=0
