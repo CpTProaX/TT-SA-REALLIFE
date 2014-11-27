@@ -1,9 +1,3 @@
-gMysqlHost = ""
-gMysqlUser = ""
-gMysqlPass = ""
-gMysqlDatabase = ""
-
-
 if not mysql_query then
 	outputServerLog("Das MySQL Module wurde nicht installiert. Die Resource wird gestoppt..")
 	stopResource(getThisResource())
@@ -17,6 +11,13 @@ end
 -- end
 
 function MySQL_Startup()
+	
+	--Read Login Data From Config
+	gMysqlHost=config["mysqlhost"]
+	gMysqlUser=config["mysqluser"]
+	gMysqlPass=config["mysqlpassword"]
+	gMysqlDatabase=config["mysqldb"]
+	
 	handler = mysql_connect(gMysqlHost, gMysqlUser, gMysqlPass, gMysqlDatabase)
 	if( not handler) then
 		outputDebugString("Couldn't run query: Unable to connect to the MySQL server!")
