@@ -1,20 +1,13 @@
---
--- Created by IntelliJ IDEA.
--- User: geramy
--- Date: 05.06.2014
--- Time: 21:55
--- To change this template use File | Settings | File Templates.
---
+
 local texts={
-    "Besuche unser Forum: http://www.terratex.eu",
-    "Stell dich anderen Usern im Forum vor: http://www.terratex.eu",
-    "Du kannst deine TerraTex-Erfahrung inviduell mit F3 einstellen.",
+    "Besuche unser Forum: "..config["maindomain"],
+    "Du kannst deine "..config["communityname"].."-Erfahrung inviduell mit F3 einstellen.",
     "Antworten viele auf deine Fragen und weitere Informationen erhälst du mit F1",
     "Wusstest du schon, dass du deine Radiostreams mit F2 in MTA hören kannst?",
-    "Besuche unseren Teamspeak3-Server: terratex.eu",
-    "Du hast ein Bug gefunden? Melde ihn im Bugtracker: http://bug.terratex.eu",
-    "Dieses Script wird entwickelt von [TTeam]Geramy92 und [TTeam]Maxx",
-    "Die Maps werden erstellt von Blizard"
+    "Besuche unseren Teamspeak3-Server: "..config["teamspeak"],
+    "Du hast ein Bug gefunden? Melde ihn im Bugtracker: "..config["bugdomain"],
+    "Dieses Script wird entwickelt von "..config["scriptername"],
+    "Die Maps werden erstellt von "..config["mappername"]
 }
 local lastTextID=0
 
