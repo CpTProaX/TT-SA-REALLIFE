@@ -25,16 +25,16 @@ function playerConnect (playerNick, playerIP, playerUsername, playerSerial, play
 
 
 	
-	if(string.find(playerNick,"TTeam"))then
+	if(string.find(playerNick,config["clantag"]))then
 	--outputDebugString(theSonder)
 		if (MySQL_GetString("players", "Nickname", "Nickname='"..playerNick.."'"))then
 	
 		else
-			cancelEvent(true,"Das ClanTag [TTeam] kann nur durch einen Admin vergeben werden!") 	
+			cancelEvent(true,"Das ClanTag "..config["clantag"].." kann nur durch einen Admin vergeben werden!") 	
 			return true;
 		end
-	elseif(MySQL_DatasetExist("players","Nickname='[TTeam]"..playerNick.."'"))then
-		cancelEvent(true,"Ein Mitglied des [TTeam]s trägt bereits diesen Namen!")
+	elseif(MySQL_DatasetExist("players","Nickname='"..config["clantag"]..playerNick.."'"))then
+		cancelEvent(true,"Ein Mitglied des "..config["clantag"].."s trägt bereits diesen Namen!")
 		return true;
 	end
 	
