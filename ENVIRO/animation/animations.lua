@@ -90,7 +90,7 @@ function setAnimation(thePlayer,cmd)
         end
 
     else
-        showError(thePlayer,"Diese Animation funktioniert derzeit nicht. Bitte melde dies im Bugtracker: bug.terratex.eu")
+        showError(thePlayer,"Diese Animation funktioniert derzeit nicht.")
     end
 end
 
