@@ -342,11 +342,11 @@ local rules={
                 ["underpoints"]=false
             },
             {
-                ["text"]="Das Drohen mit Administrativen Strafen als Nicht-TTeam-Mitglied ist verboten.",
+                ["text"]="Das Drohen mit Administrativen Strafen als Nicht-"..config["clantag"].."-Mitglied ist verboten.",
                 ["underpoints"]=false
             },
             {
-                ["text"]="Das Belügen und Betrügen des TTeams kann folgen haben!",
+                ["text"]="Das Belügen und Betrügen des "..config["clantag"].."s kann folgen haben!",
                 ["underpoints"]=false
             },
             {
