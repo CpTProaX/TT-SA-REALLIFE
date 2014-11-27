@@ -220,76 +220,38 @@ function towveh_func(thePlayer,command,SloteID)
 	end
 	local SlotID=tonumber(SloteID)
 	if(SlotID)then
-	if(vioGetElementData(thePlayer,"slot"..SlotID))then
-		if(not(tonumber(vioGetElementData(thePlayer,"slot"..SlotID))==-1))then
-			if(tonumber(vioGetElementData(thePlayer,"slot"..SlotID))==-2)then						
-				outputChatBox("Dieses Fahrzeug wurde abgeschleppt und muss am PD abgeholt werden!",thePlayer,255,0,0)
-			else				
-				if(isElement(vioGetElementData(thePlayer,"slot"..SlotID)))then				
-					local theVehicle=vioGetElementData(thePlayer,"slot"..SlotID)
-					if not(isAnyOneInVehicle(theVehicle))then
-						outputChatBox(getElementID(theVehicle), getRootElement())
-						if((not isElementInWater(theVehicle)) or getVehicleType(theVehicle) == "Boat" or tonumber(getElementModel(theVehicle)) == 539)then
-							if(getElementHealth(theVehicle)>300)then
-								if(getPlayerMoney(thePlayer)<price)then
-									showError(thePlayer,string.format("Du hast nicht genügend Geld bei dir. Ein Respawn des Fahrzeugs kostet %s", toprice(price)))
+		if(vioGetElementData(thePlayer,"slot"..SlotID))then
+			if(not(tonumber(vioGetElementData(thePlayer,"slot"..SlotID))==-1))then
+				if(tonumber(vioGetElementData(thePlayer,"slot"..SlotID))==-2)then						
+					outputChatBox("Dieses Fahrzeug wurde abgeschleppt und muss am PD abgeholt werden!",thePlayer,255,0,0)
+				else				
+					if(isElement(vioGetElementData(thePlayer,"slot"..SlotID)))then				
+						local theVehicle=vioGetElementData(thePlayer,"slot"..SlotID)
+						if not(isAnyOneInVehicle(theVehicle))then
+							outputChatBox(getElementID(theVehicle), getRootElement())
+							if((not isElementInWater(theVehicle)) or getVehicleType(theVehicle) == "Boat" or tonumber(getElementModel(theVehicle)) == 539)then
+								if(getElementHealth(theVehicle)>300)then
+									if(getPlayerMoney(thePlayer)<price)then
+										showError(thePlayer,string.format("Du hast nicht genügend Geld bei dir. Ein Respawn des Fahrzeugs kostet %s", toprice(price)))
+									else
+										setElementPosition(theVehicle,vioGetElementData(theVehicle,"spawnx"),vioGetElementData(theVehicle,"spawny"),vioGetElementData(theVehicle,"spawnz"))
+										setElementRotation(theVehicle,vioGetElementData(theVehicle,"spawnrx"),vioGetElementData(theVehicle,"spawnry"),vioGetElementData(theVehicle,"spawnrz"))
+										showError(thePlayer,"Das Fahrzeug wurde erfolgreich respawned!")
+                                    						changePlayerMoney(thePlayer,-price,"fahrzeug","Fahrzeugrespawn")
+									end
 								else
-									setElementPosition(theVehicle,vioGetElementData(theVehicle,"spawnx"),vioGetElementData(theVehicle,"spawny"),vioGetElementData(theVehicle,"spawnz"))
-									setElementRotation(theVehicle,vioGetElementData(theVehicle,"spawnrx"),vioGetElementData(theVehicle,"spawnry"),vioGetElementData(theVehicle,"spawnrz"))
-									showError(thePlayer,"Das Fahrzeug wurde erfolgreich respawned!")
-
-                                    changePlayerMoney(thePlayer,-price,"fahrzeug","Fahrzeugrespawn")
+									showError(thePlayer,"Ihr Fahrzeug ist dafür zu stark beschädigt!")					
 								end
 							else
-								showError(thePlayer,"Ihr Fahrzeug ist dafür zu stark beschädigt!")					
+								showError(thePlayer,"Ihr Fahrzeug befindet sich derzeit an einem Ort, bei dem kein Respawn möglich ist!")						
 							end
 						else
-							showError(thePlayer,"Ihr Fahrzeug befindet sich derzeit an einem Ort, bei dem kein Respawn möglich ist!")						
+							showError(thePlayer,"Das Fahrzeug ist nicht leer!")
 						end
-					else
-						showError(thePlayer,"Das Fahrzeug ist nicht leer!")
 					end
-                else
-                    outputChatBox("Ein Fehler ist aufgetreten. Bitte melde einem Scripter ([TTeam]Geramy92) den Fehlercode: EprivCarCommands252.DBSl"..SlotID..".DBP"..vioGetElementData(thePlayer,"DBID"),thePlayer)
-                    outputDebugString("Error towveh  Slot "..SlotID..". Nickname:"..getPlayerName(thePlayer))
---					local theVehicle=vioGetElementData(thePlayer,"slot"..SlotID)
---					local model=vioGetElementData(theVehicle,"model")
---					local x=vioGetElementData(theVehicle,"spawnx")
---					local y=vioGetElementData(theVehicle,"spawny")
---					local z=vioGetElementData(theVehicle,"spawnz")
---					local rx=vioGetElementData(theVehicle,"spawnrx")
---					local ry=vioGetElementData(theVehicle,"spawnry")
---					local rz=vioGetElementData(theVehicle,"spawnrz")
---					local besi=vioGetElementData(theVehicle,"besitzer")
---					local veh=createVehicle(model,x,y,z,rx,ry,rz,besi)
---					local paintjob=vioGetElementData(theVehicle,"paintjob")
---					local slot=vioGetElementData(theVehicle,"slotid")
---					local motor=vioGetElementData(theVehicle,"motor")
---					local color=vioGetElementData(theVehicle,"colors")
---					local locked=vioGetElementData(theVehicle,"locked")
---					local tun=vioGetElementData(theVehicle,"tuning")
---					local dbid=vioGetElementData(thevehicle,"dbid")
---					vioSetElementData(thePlayer,"slot"..SlotID,veh)
---						local tuning=getStringComponents(tun)
---						for theKey,theTuning in ipairs(tuning) do
---							if(theTuning~=0)then
---								addVehicleUpgrade(veh,theTuning)
---							end
---						end
---						setVehiclePaintjob(veh,paintjob)
---						local colors=getStringComponents(color)
---						setVehicleColor(veh,colors[1],colors[2],colors[3],colors[4])
---					privCars[theVehicle]=false
---					privCars[veh]=true
---					for theKey,theCar in ipairs(privVeh) do
---						if(theCar[3]==theVehicle)then
---							theCar[3]=veh
---						end
---					end
 				end
 			end
 		end
-	end
 	end
 end
 addCommandHandler("towveh",towveh_func,false,false)
