@@ -1,5 +1,7 @@
 -- not used in all files... will be set later
 config={}
+-- Name of Owner
+config["owner"]="[TTeam]Geramy92"
 
 -- array with all domains which should not found in Anti-Advertise-Functions
 config["domains"]={"terratex.eu","tt-rl.de"} 
