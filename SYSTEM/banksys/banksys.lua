@@ -124,51 +124,6 @@ addEventHandler("onResourceStart",getRootElement(),spawnAutomat)
  addEventHandler("onElementClicked",getRootElement(),showBankGui)
  
  
- -- function transfer_func(thePlayer,cmd,empf,betrags)
-	-- if(empf and betrags)then
-		-- if(getPlayerBank(thePlayer))then
-			-- if(vioGetElementData(thePlayer,"playtime")>4500)then
-				-- local betrag=tonumber(betrags)
-				-- if(betrag)then
-					-- betrag=math.round(betrag,2)
-					-- if(betrag<0)then betrag=-betrag end
-						-- if(getPlayerBank(thePlayer)<betrag)then
-							-- outputChatBox("Du hast nicht genug Geld auf deinem Bankkonto",thePlayer,255,0,0)
-						-- else
-							-- if(getPlayerFromName(empf))then
-								-- outputChatBox("Der Spieler ist Online, bitte nutze daher die normale Überweisungsfunktion",thePlayer,255,0,0)
-							-- else
-								-- if(MySQL_GetResultsCount("players", "Nickname LIKE '%"..empf.."%'")==1)then
-									-- empf=MySQL_GetString("players", "Nickname", "Nickname LIKE '%"..empf.."%'")
-								-- elseif(MySQL_GetResultsCount("players", "Nickname LIKE '[TTeam]%"..empf.."%'")==1)then
-									-- empf=MySQL_GetString("players", "Nickname", "Nickname LIKE '[TTeam]%"..empf.."%'")
-								-- end
-								-- if(MySQL_DatasetExist("userdata", "Nickname='"..empf.."'"))then		
-									-- if(getPlayerFromName(empf))then
-										-- outputChatBox("Der Spieler ist Online, daher nutze bitte die normale Überweisungsfunktion",thePlayer,255,0,0)
-									-- else
-                                        -- changePlayerBank(thePlayer,-betrag,"sonstiges","/transfer an "..getPlayerName(empf))
-										-- vioSetElementData(thePlayer,"ueberweisungssumme",vioGetElementData(thePlayer,"ueberweisungssumme")+betrag)
-										-- local query="UPDATE userdata SET Bank=Bank+"..betrag.." WHERE Nickname='"..empf.."'"
-										-- mysql_query(handler,query)
-										-- save_offline_message(empf,"SA Bank Systems",getPlayerName(thePlayer).." hat dir "..betrag.."$ überwiesen!")
-										-- outputChatBox(string.format("Der Betrag von %s$ wurde erfolgreich auf %s's Konto überwiesen!", betrag, empf),thePlayer,0,255,0)					
-									-- end
-								-- else
-									-- outputChatBox("Ein Spieler mit diesem Namen existiert nicht!",thePlayer,255,0,0)			
-								-- end					
-							-- end
-						-- end
-				-- else
-					-- outputChatBox("ungültiger Betrag",thePlayer,255,0,0)
-				-- end
-			-- else
-				-- outputChatBox("Für diese Funtion benötigst du 75 Spielstunden!",thePlayer,255,0,0)
-			-- end
-		-- end
-	-- end 
- -- end
- -- addCommandHandler("transfer",transfer_func,false,false)
  
  function pay_func(source,command,empf,betrags)
 	if(empf and betrags)then
