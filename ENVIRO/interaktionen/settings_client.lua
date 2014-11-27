@@ -129,7 +129,7 @@ function build_settingsmenu()
 	
 	gui["Info"] = guiCreateTab("Info", gui["settingsTabPanel"])
 	
-	gui["label_2"] = guiCreateLabel(70, 90, 411, 181, "@ Made By Geramy92 for TerraTex\n\nDieses GUI wird erweitert.", false, gui["Info"])
+	gui["label_2"] = guiCreateLabel(70, 90, 411, 181, "\nDieses GUI wird erweitert.", false, gui["Info"])
 	guiLabelSetHorizontalAlign(gui["label_2"], "left", false)
 	guiLabelSetVerticalAlign(gui["label_2"], "center")
 	
