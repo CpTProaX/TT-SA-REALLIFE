@@ -43,7 +43,7 @@ local rules={
                 ["underpoints"]=false
             },
             {
-                ["text"]="Jeder User hat das Recht ungestört auf TerraTex zu spielen!",
+                ["text"]="Jeder User hat das Recht ungestört auf "..config["communityname"].." zu spielen!",
                 ["underpoints"]=false
             },
         },
@@ -132,7 +132,7 @@ local rules={
                 ["underpoints"]=false
             },
             {
-                ["text"]="Bei allen sonstigen Angeboten von TerraTex gilt selbiges!",
+                ["text"]="Bei allen sonstigen Angeboten von "..config["communityname"].." gilt selbiges!",
                 ["underpoints"]=false
             },
             {
@@ -153,7 +153,7 @@ local rules={
                 ["underpoints"]=false
             },
             {
-                ["text"]="Als Modifikation werden alle Veränderungen am Spiel bezeichnet, die nicht von der Serverleitung (dem TerraTex - Reallifescript) oder dem Originalen Spiel vorgesehen sind.",
+                ["text"]="Als Modifikation werden alle Veränderungen am Spiel bezeichnet, die nicht von der Serverleitung oder dem Originalen Spiel vorgesehen sind.",
                 ["underpoints"]=false
             },
         }
@@ -204,7 +204,7 @@ local rules={
                 ["underpoints"]=false
             },
             {
-                ["text"]="Erlaubt sind: Veranstaltungshinweise (Treffen), Fraktionswerbung (Membersuche), Dienstleistungsangebote (Sex, Drogen), Suchen und Bieten von auf TerraTex-existierenden Gegenständen, Werbung für Unternehmen",
+                ["text"]="Erlaubt sind: Veranstaltungshinweise (Treffen), Fraktionswerbung (Membersuche), Dienstleistungsangebote (Sex, Drogen), Suchen und Bieten von auf "..config["communityname"].."-existierenden Gegenständen, Werbung für Unternehmen",
                 ["underpoints"]=false
             },
             {
