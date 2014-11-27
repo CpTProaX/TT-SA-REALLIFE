@@ -43,7 +43,7 @@ addEventHandler("onClientResourceStart",resourceRoot,
         kompassgui_Button[2] = guiCreateButton(26,278,148,29,"RESET",false,kompassgui_Window[1])
         kompassgui_Label[14] = guiCreateLabel(20,252,283,15,"Durschnittliche geschwindigkeit seit letztem RESET:",false,kompassgui_Window[1])
         guiLabelSetHorizontalAlign(kompassgui_Label[14],"right",false)
-        kompassgui_Label[15] = guiCreateLabel(29,319,442,75,"Information: Die angegebenen Entfernungen und Geschwindigkeiten seit letztem RESET von den tatsächlichen Werten leicht abweichen!\nErklärung: m => Meter | km => Kilometer(bei TerraTex mit Faktor 10) \nC => Koordinatenpunkte | s => Sekunden | h => Stunden",false,kompassgui_Window[1])
+        kompassgui_Label[15] = guiCreateLabel(29,319,442,75,"Information: Die angegebenen Entfernungen und Geschwindigkeiten seit letztem RESET von den tatsächlichen Werten leicht abweichen!\nErklärung: m => Meter | km => Kilometer(bei "..config["communityname"].." mit Faktor 10) \nC => Koordinatenpunkte | s => Sekunden | h => Stunden",false,kompassgui_Window[1])
         guiLabelSetHorizontalAlign(kompassgui_Label[15],"left",true)
 		
         kompassgui_Label[16] = guiCreateLabel(305,38,164,15,"Himmelsrichtungwert",false,kompassgui_Window[1])
