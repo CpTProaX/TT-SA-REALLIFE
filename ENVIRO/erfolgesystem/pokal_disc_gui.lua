@@ -1,11 +1,4 @@
---
---	Dieses Script gehört Colin Weber.
---	Dieses Script ist geistiges Eigentum, d.h. es darf weder kopiert, bearbeitet oder verfälscht werden.
---	Es darf nur auf TT-rl.de (TerraTex Reallife) genutzt werden.
---	
---	(c) 2011 by [TTeam]Geramy92 / Colin Weber
---
--- Created: 21/07/2011 15:04
+
         Pokal_disc_GUI_Window = {}
         Pokal_disc_GUI_Button = {}
         Pokal_disc_GUI_Label = {}
