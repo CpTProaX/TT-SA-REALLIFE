@@ -10,8 +10,8 @@ function OnlineBanking_Offline(sender, empfaenger, grund, betrag)
 					local empf
 					if (MySQL_GetResultsCount("players", "Nickname = '" .. empfaenger .. "'") == 1) then
 						empf = MySQL_GetString("players", "Nickname", "Nickname = '" .. empfaenger .. "'")
-					elseif (MySQL_GetResultsCount("players", "Nickname = '[TTeam]" .. empfaenger .. "'") == 1) then
-						empf = MySQL_GetString("players", "Nickname", "Nickname = '[TTeam]" .. empfaenger .. "'")
+					elseif (MySQL_GetResultsCount("players", "Nickname = '"..config["clantag"].. empfaenger .. "'") == 1) then
+						empf = MySQL_GetString("players", "Nickname", "Nickname = '"..config["clantag"].. empfaenger .. "'")
 					end
 					if (empf) then
 						if (MySQL_DatasetExist("userdata", "Nickname='" .. empf .. "'")) then
