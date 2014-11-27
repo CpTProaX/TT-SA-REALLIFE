@@ -52,10 +52,9 @@ function loadSettingsFromDB()
 	serversettings["playerOfMonthPic"]=MySQL_GetString("serversettings", "Wert","Name='spielerDesMonats'")
 	--setServerName ("German TerraTex Reallife by www.tt-rl.de Version "..serversettings["Version"])
 
-    setGameType("TerraTex Reallife "..serversettings["Version"])
-    setRuleValue ("Hosted by","TerraTex-Gaming")
-    setRuleValue ("Homepage","http://terratex.eu")
-    setMapName ("TerraTex LS+LV")
+    setGameType("TerraTex Reallife Script "..serversettings["Version"])
+    setRuleValue ("Homepage",config["maindomain"])
+    setMapName ("TerraTex")
     resetWaterLevel(0)
 
 
