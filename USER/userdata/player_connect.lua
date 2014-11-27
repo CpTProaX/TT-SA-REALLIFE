@@ -174,7 +174,17 @@ function RegisterPlayerData(nickname,pass,email,gebt,gebm,geby,werber)
 	if(werber~="" and MySQL_DatasetExist("players","Nickname='"..werber.."'")) or werber=="" then
 	
 		if not(MySQL_DatasetExist("players","Nickname='"..nickname.."'")) then
-			pass=md5(salt..pass)
+			
+			if(config["password_hash"]=="md5")then
+				pass=md5(salt..pass)
+			elseif(config["password_hash"]=="osha256")then
+				pass=sha256(salt..pass)
+			elseif(config["password_hash"]=="sha256")then
+				pass=hash("sha256",salt..pass)
+			else
+				pass=hash ("sha512", salt..pass)
+			end
+				
 
 
 			local loquery="INSERT INTO players (UUID,Nickname,Passwort,EMail,Geb_T,Geb_M,Geb_Y,werber,Salt,Serial,IP) VALUES (uuid(),'"..nickname.."','"..pass.."','"..email.."','"..gebt.."','"..gebm.."','"..geby.."','"..werber.."','"..salt.."','"..getPlayerSerial(source).."','"..getPlayerIP(source).."');"
@@ -244,6 +254,15 @@ function LoginPlayerData(nickname,pw)
 		local passdb=MySQL_GetString("players", "Passwort", "Nickname='"..nickname.."'")
 		local saltdb=MySQL_GetString("players", "Salt", "Nickname='"..nickname.."'")
 		pw=saltdb..pw
+		if(config["password_hash"]=="md5")then
+			pass=md5(saltdb..pw)
+		elseif(config["password_hash"]=="osha256")then
+			pass=sha256(saltdb..pw)
+		elseif(config["password_hash"]=="sha256")then
+			pass=hash("sha256",saltdb..pw)
+		else
+			pass=hash ("sha512", saltdb..pw)
+		end
 		pw=md5(pw)
 		if(passdb==pw) and not(vioGetElementData(source,"isLoggedInNow"))then
 			vioSetElementData(source,"isLoggedInNow",true)
