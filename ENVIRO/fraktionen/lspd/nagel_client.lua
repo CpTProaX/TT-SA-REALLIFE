@@ -1,10 +1,4 @@
---
---	Dieses Script gehört Colin Weber.
---	Dieses Script ist geistiges Eigentum, d.h. es darf weder kopiert, bearbeitet oder verfälscht werden.
---	Es darf nur auf TT-rl.de (TerraTex Reallife) genutzt werden.
---	
---	(c) 2011 by [TTeam]Geramy92 / Colin Weber
---
+
 local newAlkaRockets={
     {3405.7109375,-2.2666015625,12.309700012207,12}, --groß
     {3425.40234375,207.484375,12.309700012207,12}, --groß
