@@ -47,6 +47,11 @@ end
 
 math._random=math.random
 function math.random(value,maxvalue)
+    if(not maxvalue)then
+        return math._random(value)
+    end
+    
+    
     if(value==maxvalue)then
         return value
     else
